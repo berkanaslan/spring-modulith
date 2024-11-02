@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+      data-locations: classpath:/inventory_seed.sql
+
+  modulith:
+    republish-outstanding-events-on-restart: false
