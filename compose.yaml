@@ -1,9 +1,16 @@
 services:
   postgres:
-    image: 'postgres:latest'
+    image: 'postgres:16.2'
+    container_name: 'postgres-modulith'
     environment:
-      - 'POSTGRES_DB=mydatabase'
+      - 'POSTGRES_DB=spring_modulith'
       - 'POSTGRES_PASSWORD=secret'
-      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_USER=spring_modulith_user'
     ports:
       - '5432'
+
+    volumes:
+      - 'postgres-modulith:/var/lib/postgresql/data'
+
+volumes:
+    postgres-modulith:
