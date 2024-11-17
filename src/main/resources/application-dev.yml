@@ -6,7 +6,7 @@ spring:
 
   sql:
     init:
-      mode: always
+      mode: never
       data-locations: classpath:/inventory_seed.sql
 
   modulith:
